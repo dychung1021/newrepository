@@ -1,0 +1,48 @@
+<!DOCUMENT html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>li n-th child</title>
+        <style>
+                *{
+                    list-style:none;
+                }
+                ul{
+                    width:500px;
+                }
+
+                /* li:first-child{
+                    background-color:skyblue;
+                } */
+        </style>
+    </head>
+    <body>
+        <!-- ul>li{목록$}*10 -->
+        <ul>
+            <li>목록 1 또치 도우너 마이콜 바이올린 빨간코 엄마 빙하 연탄 라면</li>
+            <li>목록 2 또치 도우너 마이콜 바이올린 빨간코 엄마 빙하 연탄 라면</li>
+            <li>목록 3 또치 도우너 마이콜 바이올린 빨간코 엄마 빙하 연탄 라면</li>
+            <li>목록 4 또치 도우너 마이콜 바이올린 빨간코 엄마 빙하 연탄 라면</li>
+            <li>목록 5 또치 도우너 마이콜 바이올린 빨간코 엄마 빙하 연탄 라면</li>
+            <li>목록 6 또치 도우너 마이콜 바이올린 빨간코 엄마 빙하 연탄 라면</li>
+            <li>목록 7 또치 도우너 마이콜 바이올린 빨간코 엄마 빙하 연탄 라면</li>
+            <li>목록 8 또치 도우너 마이콜 바이올린 빨간코 엄마 빙하 연탄 라면</li>
+            <li>목록 9 또치 도우너 마이콜 바이올린 빨간코 엄마 빙하 연탄 라면</li>
+            <li>목록 10 또치 도우너 마이콜 바이올린 빨간코 엄마 빙하 연탄 라면</li>
+        </ul>
+        <script>
+            // let liTag = document.querySelectorAll("li");
+            // let liFirstTag = document.querySelector("li:first-child");
+            // liFirstTag.style.textDecoration="underline";
+
+            let li2nTags = document.querySelectorAll("li:nth-child(2n)");
+            //for(let i=0;li2nTags.length;i++){
+            for(let i=0;i<li2nTags.length;i++){//고희선 : for문이 오류가 있었습니다.
+                li2nTags[i].style.textDecoration="underline";
+                li2nTags[i].style.backgroundColor="skyblue";
+            }
+           
+
+        </script>
+    </body>
+</html>

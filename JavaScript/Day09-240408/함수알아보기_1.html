@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>사칙연산</title>
+</head>
+<body>
+    <script>
+    let num1 = parseInt(prompt("첫번째 숫자를 하나 입력하세요"));
+    let num2 = parseInt(prompt("두번째 숫자를 하나 입력하세요"));
+    let op = prompt("1. 더하기, 2. 빼기 3. 곱하기 4. 나누기 중에서 선택하세요");
+    switch(op){
+        case "1" :addNumber(num1, num2);
+        break;
+        case "2" :minusNumber(num1, num2);
+        break;
+        case "3" :multiNumber(num1, num2);
+        break;
+        case "4" :divideNumber(num1, num2);
+        break;
+    }
+    
+// addNnumber
+function addNumber(num1, num2){
+document.write(num1 + "+" +num2+" = "+ (num1+num2));
+}
+
+// minusNumber
+function minusNumber(a, b){
+    if(a<b){
+    document.write(b + "-" +a+" = "+(b-a));
+    }
+    else (a>b)
+    document.write(a + "-" +b+" = "+(a-b));
+    
+}
+// multiNumber
+function multiNumber(a, b){
+document.write(a + "x" +b+" = "+(a*b));
+}
+// divideNumber
+function divideNumber(a, b){
+document.write(a + "/" +b+" = "+(a/b));
+}
+    </script>
+</body>
+</html>

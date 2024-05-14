@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>배열</title>
+    </head>
+    <body>
+        <script>
+        let array = [100, 45, 150, 4, 13];      //값을 정수로 초기화하여 배열 정의
+        let season = ["봄","여름","가을","겨울"];   //값을 문자로 초기화하여 배열 정의
+        let fruits = new Array(5);              // 크기를 지정하여 배열 정의
+        fruits[0] ="오렌지";
+        fruits[1] ="사과";
+        fruits[2] ="딸기";
+        fruits[3] ="키위";
+        fruits[4] ="바나나";
+
+        let number_int =new Array();// 크기를 지정하지 않고 배열 정의 java에서는 허용하지 않음?
+        number_int[0]=0;
+        number_int[1]=1;
+        number_int[2]=2;
+        number_int[3]=3;
+        number_int[4]=4;
+
+        for (i=0; i<5;i++){
+            number_int[i]=i;
+            document.write("<br>"+fruits[i]+"는 "+number_int[i]+" 개를 갖고 있습니다.");
+        }
+        document.write("<br>");
+        let sum=0;
+        for (j=0;j<5;j++){
+            sum+=array[j];
+            document.write("<br> array["+j+"]="+array[j]);
+        }
+        document.write("<br> array의 합은 "+sum+"입니다.");
+        document.write("<br> array의 평균은 "+sum/array.length+"입니다.");
+
+        season.push("초여름");/*마지막에 요소 추가*/
+        
+        document.write("<br>");
+        document.write(season[4]);
+
+        season.pop();/*마지막 요소를 제거*/
+        document.write(season[4]);
+
+        season.shift("초봄");
+        for(k=0;k<seaon.length;k++) {document.write(season[k]);}
+        document.write("<br>");
+        season.unshift("초봄");//배열 앞쪽에 요소를 추가
+        for(k=0;k<seaon.length;k++) {document.write(season[k]);}
+        season.splice()
+</script>
+    </body>
+</html>

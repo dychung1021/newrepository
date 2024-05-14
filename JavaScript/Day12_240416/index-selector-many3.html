@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+     
+    </style>
+</head>
+<body>
+    <!-- 버튼 12개 만들기 3x4 -->
+    <!-- <div class="bgroundcolor1">
+        <button type="button"></button> 
+        <button type="button"></button>
+        <button type="button"></button>
+        <button type="button"></button>
+    </div>
+    <div class="bgroundcolor2">
+        <button type="button"></button> 
+        <button type="button"></button>
+        <button type="button"></button>
+        <button type="button"></button>
+    </div>
+    <div class="bgroundcolor3">
+        <button type="button"></button> 
+        <button type="button"></button>
+        <button type="button"></button>
+        <button type="button"></button>
+    </div> -->
+    <script>
+        // 짝수버튼 색갈은 빨강, 나머지는 회색
+        let button_color;
+        for (let i=0;i<3;i++){
+            for(let j=0;j<4;j++){
+                if((i+j)%2 ==0){document.write('<button type="button" style="color:blue; background-color : red "> </button>');}
+                else{document.write('<button type="button" style="color:blue; background-color : grey"> </button>');}
+                
+            }
+            document.write("<br>");
+        }
+               //  1열 gold 2열 salmon 3열 seagreen 4열 cadetblue
+               let btnNodeList = document.querySelectorAll("button");
+            
+// 버튼에 숫자 삽입, 한자리 숫자이면 앞에 0을 추가, 이 루틴은 이미 만들어진 버튼에 모두 적용가능
+        
+        
+            for(let i=0;i<btnNodeList.length;i++){
+               if(i<9){btnNodeList[i].innerHTML="버튼 0"+(i+1);}
+               else{btnNodeList[i].innerHTML="버튼 "+(i+1);}
+            }
+// 4의 배수인 button은 마우스가 over되면 120%커지고 out 되면 원상태
+        for(let i=0;i<btnNodeList.length;i++){
+            if(i%4==3){
+                // 마우스가 위에 나타나면 150%
+                btnNodeList[i].onmouseover=function(){ 
+                    btnNodeList[i].style.transform="scale(150%)";
+                }
+                // 마우스가 벗어나면 100%
+                btnNodeList[i].onmouseout=function(){ 
+                    btnNodeList[i].style.transform="scale(100%)";
+                    }   
+            }
+            
+        }
+ 
+            for (let i=0;i<4;i=i+4){
+                btnNodeList[i].style.color="gold";
+                btnNodeList[i+1].style.color="salmon";
+                btnNodeList[i+2].style.color="seagreen";
+                btnNodeList[i+3].style.color="cadetblue";
+         }
+
+         btnNodeList[0].onmouseover=function(){ 
+                    btnNodeList[11].style.transform="scale(150%)"};
+         btnNodeList[0].onmouseout=function(){ 
+                    btnNodeList[11].style.transform="scale(100%)"};
+    </script>
+</body>
+</html>

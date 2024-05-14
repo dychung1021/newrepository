@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #box{
+            width  :100px;
+            height : 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <script>
+        let date = new Date();
+        setInterval(timeHandler, 5000);
+        let start=date.getMinutes();
+        setInterval(settimer,30000);
+        function timeHandler(){
+
+        let ss="";    
+        date = new Date();
+        let year=date.getFullYear();
+        let month=date.getMonth()+1;
+        let day=date.getDate();
+        let time=date.getHours();
+        let min=date.getMinutes();
+        let second=date.getSeconds();  
+            if (time<12) ss='오전';
+            if (time >=12){
+                ss='오후';
+                time=time-12};
+          
+                let str=year+"년 "+month+"월 "+day+"일 "+ss+" "+time+"시 "+min+"분 "+second+"초";
+        document.write(str+'<br>');}
+
+        function settimer(){
+            if(date.getMinutes==start+2){
+                document.write("<img src='bell1.png'>")
+            }
+        }
+    </script>
+</body>
+</html>

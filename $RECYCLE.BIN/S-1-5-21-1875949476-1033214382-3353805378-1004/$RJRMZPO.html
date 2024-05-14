@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>웹폰트사용하기</title>
+
+        <style>
+         @font-face{
+            font-family:'Ostrich';/*폰트이름*/
+            src:local('Ostrich Sans'),
+                url('fonts/ostrich-san-bold.woff')format('woff'),
+                url('fonts/ostrich-san-bold.woff')format('truetype'),
+                url('fonts/ostrich-san-bold.woff')format('svg');
+         }
+         .wfont{
+            font-family:'Ostrich',sans-serif;/*웹폰트지정*/
+         }
+
+        </style>
+    </head>
+    <body>
+       <h1 class="color_do">레드향</h1>
+       <p>껍질에 붉은 빛이 돌아 <span class="accent color_do">레드향</span>이라 불린다.</p>
+       <p><span class="color_do">레드향</span>은 한라봉과 귤을 교배한 것으로</p>
+       <p class="italic">일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+    </body>
+
+</html>

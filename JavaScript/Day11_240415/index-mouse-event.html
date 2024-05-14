@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>마우스이벤트</title>
+    <style>
+        div{
+            margin-top : 20px;
+        }
+        img{
+            border:2px solid red;
+            border-radius : 15px;
+        }
+        #detail1, #detail2, #detail3{
+            display:none;
+        }
+        .second{
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <image src="doll.png" alt="양 인형" ondblclick="myDouble()"></image>
+        <div class="second" id="detail1" > 더블클릭</div>
+    </div>  
+    <div>
+        <image src="doll2.png" alt="양 인형" onmousemove="myMove()" onmouseout="myOut"></image>
+        <div class="second" id="detail2" > 마우스 무브</div>
+    </div>  
+    <div>
+        <image src="doll.png" alt="양 인형" onmouseenter="myEnter()" onmouseleave="myLeave"></image>
+        <div class="second" id="detail3" > 마우스 엔터</div>
+    </div>  
+    <script>
+        function myDouble(){
+// 오른쪽에 더블클릭 글자를 찾아오고
+// 찾아온 변수.style.display="block"; 
+        let text = document.querySelector("#detail1");
+// 찾아온 변수.style.display="block"; 
+// text.style.display="block";
+        if (text.style.display=="none"){
+            text.style.display="block";
+        }
+        else {
+            text.style.display="none";
+        }
+        }
+        function myMove(){}
+        function myEnter(){}
+        function myOut(){}
+        function myLeave(){}
+    </script>
+</body>
+</html>

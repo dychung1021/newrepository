@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <style>
+        .text{
+            width:130px;
+        }
+        .time{
+            width : 500px;
+            height: 50px;
+            border : 1px black solid;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button></button>
+    <button></button> -->
+    <div class="text"></div>
+    <div class="time"></div>
+   
+
+    <script>
+        // let btns=document.getElementsByTagName("button");/*Elemets로 배열로 모두 받음*/
+        // btns[0].addEventListener("dbclick",function(){
+        //     this.innerText="innerText"
+        // });
+        // btns[1].addEventListener("click",function(){
+        //     this.innerHTML="<h1>innerHTML</h1><img alt='' src='https://www.jetbrains.com/img/banner-home-page/galaxy-icon.svg'>"
+        // });
+        let divs = document.getElementsByTagName("div");
+        divs[0].innerHTML = "현재시각";
+        div[0].setAttribute("color","red");
+        let date = new Date();//오늘 날자 얻을수 있는 Date의 객체를 하나 만들어서
+        let year = date.getFullYear();//2024
+        let month = date.getMonth()+1;
+        let today = date.getDate();
+        let day = date.getDay();//요일 일요일 0
+        let hr = date.getHours();
+        let minu = date.getMinutes();
+        let seconds = date.getSeconds();
+
+        divs[1].innerHTML=year + "년 "+ month +"월 "+ today +"일 "+ Day_of_Week(day)+" "+ hr+"시 "+ minu+"분 "+seconds+"초";
+        function Day_of_Week(day){
+            let week="";
+            switch(day){
+                case 0 :
+                    week ="일요일";
+                    break;
+                case 1 :
+                    week ="월요일";
+                    break;
+                case 2 :
+                    week ="화요일";
+                    break;
+                case 3 :
+                    week ="수요일";
+                    break;
+                case 4 :
+                    week ="목요일";
+                    break;
+                case 5 :
+                    week ="금요일";
+                    break;
+                case 6 :
+                    week ="토요일";
+                    break;
+
+                }
+                return week;
+            }
+        
+    </script>
+</body>
+</html>

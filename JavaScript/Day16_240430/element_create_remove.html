@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>요소 추가 삭제 </title>
+        <style>
+            li{
+
+            }
+            button{
+
+            }
+            #ul{
+
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <h1> Web programming</h1>
+        <h3> 영어 단어장을 만듭시다</h3>
+        <h3> 다 외운 단어는 클릭해서 삭제할 수 있습니다.</h3>
+        <input type="text" id="input" name="input" autofocus>
+        <!-- autofocus는 input시 커서를 나타나게 함. -->
+        <button>추가</button>
+        <hr>
+        <ul id="ul">
+
+        </ul>
+        <script>
+            let inputForKey = document.getElementById("input");
+            inputForKey.addEventListener("keydown",function(){
+
+            });
+            let btns=document.getElementsByTagName("button");
+            let kk=document.getElementById("input");//input 내용이 kk의 value에 저장됨. kk는 input의 주소를 가지고 있고
+            let newLi;
+            let txtNode;
+            btns[0].addEventListener("click", function(){
+                newLi= document.createElement("li");
+                txtNode = document.createTextNode(kk.value);//li 태그의 textNode만듬
+                newLi.appendChild(txtNode);//부모노드.appendChild(자식노드) txtNode를 newP의 자식node로 등록
+                let uls=document.getElementsByTagName("ul");   
+                uls[0].appendChild(newLi);        
+                // newLi의 부모노드를 찾아(Tag Name ul 인 놈을 찾기) newLi를 자식 노드로 등록
+                uls[0].insertBefore(newLi, uls[0].firstChild);//나중에 입력된 것이 위쪽으로
+                kk.value="";
+
+                newLi.addEventListener("click", function(){
+                    //만든 li를 삭제해 주세요
+                uls[0].removeChild(this);
+                });
+            });
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCUMENT html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>event</title>
+        <style>
+            /* button{
+
+            } */
+        </style>
+    </head>
+    <body>
+        <button onmouseout ="changeColor('')" onmouseover="changeColor('red')" onclick="myAlert()">버튼</button>
+        <!-- button tag 내에서 이미 조건 확정, if 문이 필요없음. onmouseout, onmouseover가 이미 조건 수행 -->
+        <!-- // 태그 내에 이벤트마다 함수를 지정 -->
+        
+        <script>
+            function myAlert(){
+                alert("알림입니다.");
+            }
+
+            function changeColor(color){
+                let btn = document.querySelector("button");//버튼태그를 가지고 와서 해당 변수로 할당하여 버튼을 핸들링                
+                btn.style.backgroundColor=color;//색깔을 빨간색으로
+                
+            }
+           
+        </script>
+    </body>
+</html>

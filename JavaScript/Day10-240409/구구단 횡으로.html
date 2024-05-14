@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>구구단</title>
+    <style>
+        div{
+            display:inline-block;
+            padding:0 20px 30px 20px;
+            margin:15px;
+            border:1px solid #ccc;
+            line-height:2;
+            background-color:yellow;
+        }
+        div:nth-child(2n+1){
+            background-color: rgb(255, 0, 106);
+        }
+        div h3{
+            text-align:center;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        document.write("<h1>구구단</h1>");
+        // 구구단 횡으로 인쇄
+        let j,k;
+        for(let k=2;k<10;k++){   
+            document.write("<div>");
+            document.write("<h3>"+k+"단</h3>");
+        
+
+        for(j=1;j<10;j++){
+               
+                        document.write(k+"x"+j+"="+gugudan(k,j)+"<br>");
+            } 
+            document.write("</div>"); 
+        } 
+       
+
+       
+        function gugudan(i,j){
+            return i*j ;
+        }
+    </script>
+    
+</body>
+</html>

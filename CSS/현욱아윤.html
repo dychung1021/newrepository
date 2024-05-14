@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>현욱이 아윤이 앨범</title>
+        <!-- <link rel="stylesheet" href="hyunwook.css"> -->
+        <style>
+             body{
+            
+            background:url("./images/flower.jpg") no-repeat fixed;
+            background-size:cover;
+            text-align:center;
+          }
+            img{
+                border-radius:50%;
+            }
+            div{
+                width:800px;
+                /* height:450px; */
+                /* background-color: rgba(174, 197, 176, 0.519); */
+                text-align:center;
+                margin: 0 auto;
+            }
+            span{
+                padding:20px 70px;
+                display:inline-block;
+                height:337px;
+            }
+                 
+        </style>
+    </head>
+    <body id="tt">
+        back
+        <!-- <div style="position:relative; top:50%; left:50%"> -->
+            <div>
+                <h2 style="font-weight: bolder; color:white"> <em>현욱이와 아윤이의 앨범</em></h2>
+            <span><img src="현욱.jpg" alt="" ></span><span><img src="아윤.jpg" alt=""></span>
+            <h3> 누가 왔나요?</h3>
+        </div>
+        
+        <script>
+            let spanTag=document.querySelectorAll("span");
+            spanTag[0].onclick=function(){
+                // 현욱이 사진
+                
+                let newDiv=document.createElement("div");
+
+                let newImg=document.createElement("img");
+                let newImgsrc=document.createAttribute("src");
+                let newImgalt=document.createAttribute("alt");
+                newImgsrc.value="현욱.jpg";
+                newImgalt.value="";
+                newImg.setAttributeNode(newImgsrc);
+                newImg.setAttributeNode(newImgalt);
+                newDiv.appendChild(newImg);
+                document.getElementById("tt").appendChild(newDiv);
+
+                let newText=document.createTextNode("현욱이네요!!");
+                newDiv.appendChild(newText);
+                document.getElementById("tt").appendChild(newDiv);
+            };
+            
+            spanTag[1].onclick=function(){
+                // 아윤이 사진
+                
+                document.write("아윤이네요!!")};
+                
+        </script>
+    </body>
+</html>

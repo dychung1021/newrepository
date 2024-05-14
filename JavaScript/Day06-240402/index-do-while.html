@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>do-while</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            let id = "";
+            let pw = "";
+            do{
+                    id = prompt("id를 입력하세요.");
+                    pw = prompt("password 를 입력하세요.");
+                    if(id==null || pw==null){break;};
+            }while( !(id == "iot" && pw == "8888"));
+            // id pw를 받아서 id="iot"이고 pw는 "8888"이면 "go~!"alert()를 보여주자
+            // 아니면 다시 로그인 정보를 받아보자
+            document.write("<br> go~!")
+        </script>
+    </body>
+</html>

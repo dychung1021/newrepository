@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img create & remove</title>
+</head>
+<body>
+    <h1>DOM을 공부합시다.</h1>
+    <a href="#" onclick=" this.onclick='';">구글사이트</a>
+        <div id="info"></div>
+    <script>
+
+        let newP= document.createElement("p");
+        let txtNode = document.createTextNode("어렵게 만든 DOM은 document object");//p 태그의 textNode만듬
+            newP.appendChild(txtNode);//부모노드.appendChild(자식노드) txtNode를 newP의 자식node로 등록
+            document.getElementById("info").appendChild(newP); //document.getElementById("info")부모노드찾기. appendChild(자식노드)          
+                // newP의 부모노드를 찾아(info id를 갖는 놈을 찾기) newP를 자식 노드로 등록
+
+
+        // create img tag and keep in mind that img tag has src and alt attribute without exception.
+        let newImg=document.createElement("img") ;//create img object to be added
+        let srcNode=document.createAttribute("src");// create attribute src of img object
+        let altNode=document.createAttribute("alt");// create attribute alt of img object
+        srcNode.value="../Day15_240429/아윤.jpg";//designate picture
+        altNode.value="구글이미지";               // designate alt value
+        newImg.setAttributeNode(srcNode);//얘네 속성 노드의 연결은 setAttributeNode를 쓴다. Not .appendChild()
+        newImg.setAttributeNode(altNode);
+        document.getElementById("info").appendChild(newImg);
+        //지울 때에도 부모 노드를 알아야 함
+        // 노드 삭제하기 부모노드.removeChild(자식노드)
+        // 구글사이트를 클릭시에 p노드를 지웁시다(<a>태그를 찾고 그 객체의 addEventListener)
+        let aTag= document.getElementsByTagName("a");
+        aTag[0].addEventListener("click",function(){
+              document.getElementById("info").removeChild(newP);
+      
+      
+        //이미지 태그를 지워보려면, 현재의 노드 newImg 부모 노드는 
+        newImg.parentNode.removeChild(newImg);
+      }) ;
+    </script>
+</body>
+</html>

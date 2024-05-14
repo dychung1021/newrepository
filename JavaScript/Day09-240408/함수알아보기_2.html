@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = prompt("숫자를 1개 입력하세요");
+        num1 = parseInt(num1);
+        let num2 = prompt("숫자를 1개 입력하세요");
+                num2 = parseInt(num2);
+        let op = prompt("1. 더하기 2. 빼기 3. 곱하기 4. 나누기");
+        let ret = 0;
+        switch(op){
+            case "1" : ret=addNumber(num1, num2);
+            break;
+            case "2" : ret=minusNumber(num1, num2);
+            break;
+            case "3" : ret=multiNumber(num1, num2);
+            break;
+            case "4" : ret=divideNumber(num1, num2);
+            break;
+        }
+        document.write("계산결과는 "+ret+" 입니다.");
+
+        function addNumber(num1, num2){
+                let result=num1+num2;
+                return result;
+        }
+        function minusNumber(num1, num2){
+                let result=num1-num2;
+                return result;
+        }
+        function multiNumber(num1, num2){
+                let result=num1*num2;
+                return result;
+        }
+        function divideNumber(num1, num2){
+                let result=num1/num2;
+                return result.toFixed(2);
+        }
+    </script>
+</body>
+</html>

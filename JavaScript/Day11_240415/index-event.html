@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background-color : violet;
+            margin-top: 10px;
+            text-align : center;
+            font-weight : bold;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- onclick() ondbclick() onmouseover() onmouseout() -->
+    <button id ="btn">나는 버튼!</button>
+    <div id="rect">
+        네모
+    </div>
+   
+    <script>
+        function myDo(){
+            alert('클릭!!');
+        }
+        let btn = document.getElementById("btn");
+        btn.onclick=function(){
+            btn.style.backgroundColor="yellow";
+        }
+        // btn.onmouseover의 이벤트처리 할 수 있는 함수
+        // 하는 일은 글씨를 빨간색으로 변경해보자
+        // btn.style.color="red";
+        
+        // 네모 위에 마우스 오버되면 백그라운드 색갈을 gold로 셋팅
+        //1. 요소찾기 id rect부터 찾아서
+        //2. 변수에 할당(이제부터 해당요소를 대신해서 JS에서 사용됨)
+        //3. 변수로 핸들링, 백그라운드 색을 gold로 지정하자
+        //4. 네모의 크기를 키워주자.
+            //네모.style.scale="150%";
+            //네모.cursor="pointer";
+        let a=0;
+        let rect = document.getElementById("rect");
+        rect.onmouseover=function(){
+            rect.style.backgroundColor="gold";
+            rect.style.scale="150%";
+            rect.cursor="pointer";
+        }
+        rect.onmouseout=function(){
+            rect.style.backgroundColor="violet";
+            rect.style.scale="100%";
+            rect.cursor="pointer";
+        }
+        rect.onclick=function(){
+            if(a%2==0){
+                Col="violet";
+                
+            }
+            else{
+                Col="white";
+                
+            }
+            a++;
+            rect.style.backgroundColor=Col;
+            rect.style.scale="100%";
+
+            }
+        
+    </script>
+    
+</body>
+</html>

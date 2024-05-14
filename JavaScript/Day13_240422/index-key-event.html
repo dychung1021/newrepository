@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키이벤트</title>
+</head>
+<body>
+    <input id="input" name="input" type="text" onkeydown="onkey(event)" onkeyup="onkeyup(event)">
+    <br>
+    <script>
+        let inputTag=document.querySelector('#input');
+        function onkeydown(event){
+            console.log(event.keyCode);
+            console.log(event);
+            if(event.keyCode ==13)//Enter key
+            {
+                alert("1");
+                inputTag.style.backgroundColor="red";
+            }
+          
+        }
+        // function onkeyup(){
+        //     console.log("<br>onkeyup()");
+            
+        // }
+        // function onkeypress(){
+        //     console.log("<br>onkeypress()");
+            
+        // }
+    </script>
+</body>
+</html>

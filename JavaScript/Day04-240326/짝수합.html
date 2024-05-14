@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>짝수합</title>
+    </head>
+    <body>
+        <script>
+// 1부터 100까지 짝수의 합을 구하시오
+let sum=0;
+for(let i=1;i<=100;i++)
+        {
+            console.log(i);
+            if( i% 2 == 0){sum+=i;}    
+        }    
+
+document.write("1부터 100까지의 짝수의 합은 "+sum+" 입니다.")    
+
+//Difference between "Java if" and "Java Script if"
+//if(num=15){} 인 경우, Java에서는 error 발생, Java Script에서는 num에 15를 대입해버리고 memory에 0이 아닌
+//모든 숫자를 True로 인식함.
+//즉 Java에서는 조건문의 ()에 조건문만 들어갈 수 있으나 JavaScript에서는 조건문()에 수식이 들어갈 수 있다.
+//띠어쓰기를 포함한 모든 문자도 true로 받아들이지만 빈칸은 받아들이지 않음. 즉""만 0으로 간주 false 처리
+
+        </script>
+    </body>    

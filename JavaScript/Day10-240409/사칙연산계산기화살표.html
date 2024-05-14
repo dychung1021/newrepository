@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>사칙계산기 화살표함수</title>
+</head>
+<body>
+    <script>
+        let num1=parseInt(prompt("첫번째 숫자를 입력해주세요"));
+        let num2=parseInt(prompt("두번째 숫자를 입력해주세요"));;
+        let op=parseInt(prompt("1 : 덧셈 2 : 뺄셈 3 : 곱셈 4 : 나눗셈"));
+        
+        
+        
+        //화살표함수 작성
+        let addNumber=(num1,num2) => num1+num2 ;
+        let subNumber=(num1,num2) => num1-num2 ;
+        let mulNumber=(num1,num2) => num1*num2 ;        
+        let divNumber=(num1,num2) => num1/num2 ;
+    
+        switch(op){
+            case 1 : {
+                k=addNumber(num1, num2);//화살표함수 호출
+                document.write(num1+"+"+ num2+"="+k);
+                break;
+            }
+            case 2 : {
+                k=subNumber(num1, num2);//화살표함수 호출
+                document.write(num1+"-"+ num2+"="+k);
+                break;
+            }
+            case 3 : {
+                k=mulNumber(num1, num2);//화살표함수 호출
+                document.write(num1+"x"+ num2+"="+k);
+                break;
+            }
+            case 4 : {
+                k=divNumber(num1, num2);//화살표함수 호출
+                document.write(num1+"/"+ num2+"="+k);
+                break;
+            }
+            default :
+                document.write("잘못된 연산");
+        }
+    </script>
+</body>
+</html>

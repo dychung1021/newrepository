@@ -1,0 +1,14 @@
+*{
+    background-color: white;
+}
+label{
+    color: blue;
+}
+form .input{
+    display : inline-block;
+    text-align:center;
+    margin : 0 auto;
+}
+input, li{
+    font-size:larger;
+}

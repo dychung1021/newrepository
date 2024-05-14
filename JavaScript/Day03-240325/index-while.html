@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>while</title>
+    </head>
+    <body>
+        <script>
+            for (let i=0; i<10; i++)
+            {
+                document.write("#"); // ##########
+            }
+            document.write("<br>");
+            // while (조건식)
+            // { 
+          //      반복을 수행할 구문
+            //}
+
+            let j=0;
+            while (j<10)
+            {
+                document.write("#");
+                j++;
+            }
+
+            document.write("<br>");
+            /*
+            고희동
+            고희동
+            고희동
+            고희동
+            */
+
+            
+              document.write("이것은 for for loop"); 
+              document.write("<br>");
+           for ( let i=0; i<5; i++)
+            {
+                for (k=0 ; k<=i; k++)
+                {
+                document.write("*");
+                }
+             document.write("<br>");
+        }
+             document.write("이것은 for while loop");
+             document.write("<br>");
+            for ( let i=0; i<5; i++)
+            {
+                let k=0;
+                while (k<=i)
+                {
+                document.write("*");
+                k++;
+                }
+             document.write("<br>");
+        }
+        document.write("이것은 while while loop");
+        document.write("<br>");
+        let i=0;
+        while (i<5)
+            {
+                let k=0;
+                while (k<=i)
+                {
+                document.write("*");
+                k++;
+                }
+                i++;
+             document.write("<br>");
+            }
+
+
+            /* 12345
+               678910
+               1112131415
+               1617181920
+               2122232425*/ 
+
+            for (i=0;i<5;i++)
+            {
+                for (j=i*5;j<((i+1)*5);j++)
+                {document.write((j+1)+"\t");}
+                document.write("<br>")
+            }   
+
+            /* 13579
+            1113151719
+            2123252729
+            3133353739
+            4143454749*/ 
+
+            let number=1;
+            for(let i=0;i<5; i++)
+            {
+                for(let j=0; j<5;j++)
+                {
+                    document.write(number+"\t");
+                    number++;
+                }
+                document.write("<br>");
+            }
+            
+            number=1;
+            for(let i=0;i<5; i++)
+            {
+                for(let j=0; j<5;j++)
+                {
+                    document.write(number+"\t");
+                    number++;
+                }
+                document.write("<br>");
+            }
+                /* 1 4 9 16 25
+            36 49 64 81 100*/
+ 
+            number=1;
+            for(let i=0;i<2; i++)
+            {
+                for(let j=0; j<5;j++)
+                {
+                    number=i+j+1;
+                    number=number*number;
+                    document.write(number+"\t");
+                   
+                }
+                document.write("<br>");
+            } 
+
+        </script>
+    </body>
+</html>

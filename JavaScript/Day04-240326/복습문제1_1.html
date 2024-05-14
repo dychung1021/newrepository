@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+    <meta charset="utf-8">
+    <title>복습문제1</title>
+</head>    
+<body\>
+        <script>
+// 입력받은 점수에 따라 60점 이상이면 합격
+// 미만이면 불합격을 출력하는 프로그램
+//'나잘난'은 아래와 같이 성적을 받았다. 나잘난의 성적의 총합계와
+// 평균을 구해서 출력하는 프로그램을 작성하시오.
+// 파이선 60점, 자바 70점, 안드로이드 80점
+// C언어 50점, C++ 30점
+sum=0;
+score_python = Number(prompt("Python 점수를 입력하세요"));
+score_Java = Number(prompt("Java 점수를 입력하세요"));
+score_Android = Number(prompt("Android 점수를 입력하세요"));
+score_c = Number(prompt("C 점수를 입력하세요"));
+score_cplus = Number(prompt("C++ 점수를 입력하세요"));
+sum=score_python + score_Java + score_Android + score_c + score_cplus;
+avg= sum/5;
+if(avg<60){
+    document.write("평균점이 60점 미만입니다. 불합격입니다.<br>");
+}
+else {
+    document.write("합격입니다.<br>");
+}
+document.write("귀하의 성적은 총점"+sum+" 점, 평균 "+avg+" 점입니다.");
+
+
+        </script>
+    </body.>

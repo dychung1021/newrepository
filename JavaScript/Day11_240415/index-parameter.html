@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="utf-8">
+    <title>매개변수</title>
+    </head>
+    <body>
+
+        <script>
+            let num1 = parseInt (prompt("숫자를 입력해 주세요"));
+            let num2 = parseInt (prompt("숫자를 입력해 주세요"));
+            let num3 = parseInt (prompt("숫자를 입력해 주세요"));
+            let ret = add(num1, num2,num3);
+            document.write(num1+"+" +num2+ "+"+ num3 +"=" +ret+'<br>');
+
+            let ret1 = minus(num1,num2,num3);
+            document.write(num1+"-" +num2+ "+"+ num3+"="+ ret1+'<br>');
+
+            function add(n1, n2, n3)
+            {
+                let result = n1 + n2 +n3;
+                return result;
+            }    
+            function minus(n1,n2,n3)
+            {
+                let result = n1 -n2 +n3;
+                return result;
+            }    
+
+
+            let i=5, j=2,k;
+            k=sub (i,j)
+            document.write(i+"-"+j+"="+k+"<br>");
+            function sub(sub1, sub2){
+                return sub1-sub2;
+            }
+
+            let result;            
+            let kk=1;
+            result=pow(3);
+            
+            document.write("3^3="+result+"<br>");
+            function pow(k){
+              let mul=1;
+              for (i=1;i<=k;i++)
+                {mul=mul*k;}
+                return mul;
+            }
+            
+
+            let age=0;
+            result= setAge(8);
+            document.write(result+"<br>");
+            //age 값을 28로 할당될 수 있는 함수를 작성
+            function setAge(a){
+                return a+20 ;
+            }
+
+ // 필요한 함수를 정의하시오
+            // student[i]로 접근해서 값을 모두 출력할 것
+            // 마이콜
+            // 맛좋은 라면
+            // 꼬불꼬불
+            // 연탄
+
+            let student=['마이콜', '맛좋은 라면', '꼬불꼬불', '연탄'];
+            print(student);
+            function print(student){
+                for (let i=0;i<student.length;i++){
+                    document.write(student[i]+"<br>");
+                }
+            }
+
+            
+            // 필요한 함수를 정의하시오
+            // student[i]로 접근해서 값을 모두 출력할 것
+            // 마이콜!
+            // 맛좋은 라면!
+            // 꼬불꼬불!
+            // 연탄!
+
+            for (kk=0;kk<student.length;kk++){
+            printDo(student[kk],"!<br>");
+            }
+
+            function printDo(aaa, bbb){
+                document.write(aaa+bbb);
+              return aaa+bbb+"<br>";
+            }
+
+            printDo("깐따삐야","?!<br>");
+            printDo("엄마","?<br>");
+
+            printDo("아윤아","현욱아");
+            </script>
+    </body>
+</html>

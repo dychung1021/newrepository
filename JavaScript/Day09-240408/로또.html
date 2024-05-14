@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로또</title>
+</head>
+<body>
+    <script>
+        //1~45랜덤한 수 추출
+
+        //함수호출
+        let rndNum;
+        rndNum=myRandom(45);
+        let lottoArray=new Array();
+
+        while (lottoArray.length<6){//6번 로또 숫자를 생성(중복생성 가능성 때문에 for 사용 안됨)
+            if (checkNum(lottoArray,rndNum)) {continue;}// 지금 뽑은 수가 기존 뽑힌 수와 같은지
+            else lottoArray.push(myRandom(45));//같지 않으면 lottoArray에 추가
+        }
+        document.write(lottoArray);
+        //함수정의
+        //
+        function myRandom(maxNum){
+            //1~maxNum범위 내의 값을 랜덤하게 반환
+            //0.0<=Math.random<1.0
+            //0.0<=Math.random*maxNum<45.0 //0,1,2...44
+            //0.0+1<=<45+1
+            //1.0 ... 45.9999
+            let rndNum= Math.random()*maxNum+1;
+            return parseInt(rndNum);//Number(rndNum)
+        }
+        // 새로 생성된 숫자가 기존의 생성된 숫자와 중복되는지 점검
+        // 중복되면 true를 반환
+        // 아니면 false를 반환
+        function checkNum(lottoArray,rndNum){
+            for(i=0;i<lottoArray.length;i++){
+                if(rndNum==lottoArray[i]){return true;}
+            }
+                return false;
+        }
+    </script>
+   
+</body>
+</html>

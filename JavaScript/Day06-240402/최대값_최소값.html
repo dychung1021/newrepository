@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>최대최소값 찾기</title>
+    </head>
+    <body>
+        <script>
+        let maximum=0;
+        let minimum=0;
+        let num1=0;
+        let num2=0;
+        /*while(true){} */
+            num1=Number(prompt("첫번째 숫자를 입력해 주세요"));
+            num2=Number(prompt("두번째 숫자를 입력해 주세요"));
+               
+        if(num1<num2) {
+            maximum=num2;
+            minimum=num1;
+            document.write("최대값은 "+maximum+" 최소값은 "+ minimum+"입니다.");}
+            else if (num1>num2){
+                minimum=num2;
+                maximum=num1;
+                document.write("최대값은 "+maximum+" 최소값은 "+ minimum+"입니다.");
+                }
+            else {document.write("두 숫자는 서로 같습니다."); 
+                }
+            
+        /*if(min>a1) min=a1;
+        
+        if(max<a2) max=a2;
+        if(min>a2) min=a2;
+
+        if(max<a3) max=a3;
+        if(min>a3) min=a3;
+
+        document.write("최대값은 "+ max);
+        document.write("<br>");
+        document.write("최소값은 "+ min); */
+    </script>
+    </body>
+</html>
